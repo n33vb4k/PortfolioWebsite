@@ -20,12 +20,18 @@ const SideBar = () => {
 
 type SideBarIconProps = {
     icon: React.ReactNode;
+    text?: string;
 };
 
-const SideBarIcon = ({ icon }: SideBarIconProps) => (
-    <div className="sidebar-icon">
+const SideBarIcon = ({ icon, text = "label"}: SideBarIconProps) => (
+    <div className="sidebar-icon group">
         {icon}
+        <span className="sidebar-text group-hover:scale-100">
+            {text}
+        </span>
     </div>
+
+    
 );
 
 const Divider = () => (<hr className="sidebar-hr" />);
