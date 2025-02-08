@@ -4,18 +4,30 @@ import { BsFillGrid3X2GapFill } from "react-icons/bs";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { FiLink2 } from "react-icons/fi";
 
-const SideBar = () => {
+type SideBarProps = {
+    onSideBarClick: (section: | "home" | "projects" | "contact" | "links") => void;
+};
+
+const SideBar = ( {onSideBarClick} : SideBarProps) => {
     return (
         <div className="fixed top-0 left-0 h-screen w-16 flex flex-col
                   bg-white dark:bg-gray-900 shadow-lg justify-between">
             <div className="flex-grow-[0.2]"></div>
-            <SideBarIcon icon={<AiFillHome size="26" />} text='Home'/>
+            <div className="cursor-pointer" onClick={() => onSideBarClick("home")}>
+                <SideBarIcon icon={<AiFillHome size="26" />} text='Home'/>
+            </div>
             <Divider />
-            <SideBarIcon icon={<BsFillGrid3X2GapFill size="32" />} text='Projects'/>
+            <div className="cursor-pointer" onClick={() => onSideBarClick("projects")}>
+                <SideBarIcon icon={<BsFillGrid3X2GapFill size="32" />} text='Projects'/>
+            </div>
             <Divider />
-            <SideBarIcon icon={<RiContactsBook3Fill size="28" />} text='Contact'/>
+            <div className="cursor-pointer" onClick={() => onSideBarClick("contact")}>
+                <SideBarIcon icon={<RiContactsBook3Fill size="28" />} text='Contact'/>
+            </div>
             <Divider />
-            <SideBarIcon icon={<FiLink2 size="28" />} text='Links' />
+            <div className="cursor-pointer" onClick={() => onSideBarClick("links")}>
+                <SideBarIcon icon={<FiLink2 size="28" />} text='Links' />
+            </div>
             <Divider />
             <SideBarIcon icon={<BsGearFill size="26" />} />
             <div className="flex-grow-[0.2]"></div>
