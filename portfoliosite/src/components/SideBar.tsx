@@ -1,4 +1,3 @@
-import { BsGearFill } from 'react-icons/bs';
 import { AiFillHome } from "react-icons/ai";
 import { BsFillGrid3X2GapFill } from "react-icons/bs";
 import { RiContactsBook3Fill } from "react-icons/ri";
@@ -13,6 +12,7 @@ const SideBar = ( {onSideBarClick} : SideBarProps) => {
         <div className="fixed top-0 left-0 h-screen w-16 flex flex-col
                   bg-white dark:bg-gray-900 shadow-lg justify-between">
             <div className="flex-grow-[0.2]"></div>
+            <Divider />
             <div className="cursor-pointer" onClick={() => onSideBarClick("home")}>
                 <SideBarIcon icon={<AiFillHome size="26" />} text='Home'/>
             </div>
@@ -29,7 +29,6 @@ const SideBar = ( {onSideBarClick} : SideBarProps) => {
                 <SideBarIcon icon={<FiLink2 size="28" />} text='Links' />
             </div>
             <Divider />
-            <SideBarIcon icon={<BsGearFill size="26" />} />
             <div className="flex-grow-[0.2]"></div>
         </div>
     );
