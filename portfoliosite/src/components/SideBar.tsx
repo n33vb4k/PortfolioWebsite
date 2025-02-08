@@ -1,19 +1,22 @@
-import { BsPlus, BsFillLightningFill, BsGearFill } from 'react-icons/bs';
-import { FaFire, FaPoo } from 'react-icons/fa';
+import { BsGearFill } from 'react-icons/bs';
+import { AiFillHome } from "react-icons/ai";
+import { BsFillGrid3X2GapFill } from "react-icons/bs";
+import { RiContactsBook3Fill } from "react-icons/ri";
+import { FiLink2 } from "react-icons/fi";
 
 const SideBar = () => {
     return (
         <div className="fixed top-0 left-0 h-screen w-16 flex flex-col
                   bg-white dark:bg-gray-900 shadow-lg">
-            <SideBarIcon icon={<FaFire size="28" />} />
+            <SideBarIcon icon={<AiFillHome size="26" />} text='Home'/>
             <Divider />
-            <SideBarIcon icon={<BsPlus size="32" />} />
+            <SideBarIcon icon={<BsFillGrid3X2GapFill size="32" />} text='Projects'/>
             <Divider />
-            <SideBarIcon icon={<BsFillLightningFill size="20" />} />
+            <SideBarIcon icon={<RiContactsBook3Fill size="28" />} text='Contact'/>
             <Divider />
-            <SideBarIcon icon={<FaPoo size="20" />} />
+            <SideBarIcon icon={<FiLink2 size="28" />} text='Links' />
             <Divider />
-            <SideBarIcon icon={<BsGearFill size="20" />} />
+            <SideBarIcon icon={<BsGearFill size="26" />} />
         </div>
     );
 };
