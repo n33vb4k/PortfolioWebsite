@@ -7,7 +7,8 @@ import { FiLink2 } from "react-icons/fi";
 const SideBar = () => {
     return (
         <div className="fixed top-0 left-0 h-screen w-16 flex flex-col
-                  bg-white dark:bg-gray-900 shadow-lg">
+                  bg-white dark:bg-gray-900 shadow-lg justify-between">
+            <div className="flex-grow-[0.2]"></div>
             <SideBarIcon icon={<AiFillHome size="26" />} text='Home'/>
             <Divider />
             <SideBarIcon icon={<BsFillGrid3X2GapFill size="32" />} text='Projects'/>
@@ -17,6 +18,7 @@ const SideBar = () => {
             <SideBarIcon icon={<FiLink2 size="28" />} text='Links' />
             <Divider />
             <SideBarIcon icon={<BsGearFill size="26" />} />
+            <div className="flex-grow-[0.2]"></div>
         </div>
     );
 };
