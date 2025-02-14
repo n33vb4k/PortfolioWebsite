@@ -6,7 +6,7 @@ const Home = () => {
   const fullText =
     `
     Hi, I'm Neev Bakshi... 
-    
+
     `;
   // State to hold the currently displayed text
   const [displayedText, setDisplayedText] = useState('');
