@@ -7,7 +7,7 @@ type projectCardProps = {
 const ProjectCard = ({ imageSrc, title, description }: projectCardProps) => {
   return (
     <div className="project_card group">
-      <img className="h-1/3 rounded-2xl p-2" src={imageSrc} alt={title} />
+      <img className="h-1/3 rounded-2xl p-2" src={imageSrc} alt={title + " image"} />
       <h2
         className="text-center text-lg text-indigo-500 font-bold 
             group-hover:text-white transition-all duration-300 ease-linear 

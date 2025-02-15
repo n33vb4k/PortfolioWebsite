@@ -18,7 +18,8 @@ const SideBar = ( {onSideBarClick} : SideBarProps) => {
 
     return (
         <div className="fixed top-0 left-0 h-screen w-16 flex flex-col
-                  bg-white dark:bg-gray-900 shadow-lg justify-between">
+                  bg-white dark:bg-gray-900 shadow-lg justify-between
+                  transition-all duration-300 ease-linear">
             <div className="flex-grow-[0.1]"></div>
             <Divider />
             <div className="cursor-pointer" onClick={() => onSideBarClick("home")}>
