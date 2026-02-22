@@ -4,10 +4,10 @@
 
 @layer components {
   .sidebar-icon {
-    @apply relative flex items-center justify-center 
-    h-12 w-12 mt-2 mb-2 mx-auto  
-  bg-gray-400 hover:bg-indigo-600 dark:bg-gray-800 
-  text-indigo-500 hover:text-white
+    @apply relative flex items-center justify-center
+    h-12 w-12 mt-2 mb-2 mx-auto
+    bg-gray-200 hover:bg-indigo-600 dark:bg-gray-800
+    text-indigo-500 hover:text-white
     hover:rounded-xl rounded-3xl
     transition-all duration-300 ease-linear
     cursor-pointer shadow-lg;
@@ -15,24 +15,80 @@
 
   .sidebar-text {
     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
-    text-white bg-gray-900 
-    text-xs font-bold 
-    transition-all duration-100 scale-0 origin-left;
+    text-white bg-gray-900
+    text-xs font-bold
+    transition-all duration-100 scale-0 origin-left
+    pointer-events-none;
   }
 
   .sidebar-hr {
-    @apply bg-gray-200 dark:bg-gray-800 
-    border border-gray-200 dark:border-gray-800 rounded-full
+    @apply bg-gray-300 dark:bg-gray-800
+    border border-gray-300 dark:border-gray-800 rounded-full
     mx-2;
   }
 
   .project_card {
-    @apply relative flex flex-col items-center justify-center
-    w-80 h-96 p-4 m-4
+    @apply relative flex flex-col
+    w-80 h-96 p-5
     bg-white dark:bg-gray-800 hover:bg-indigo-600 dark:hover:bg-indigo-600
     rounded-xl shadow-lg
     transition-all duration-300 ease-linear
-    cursor-pointer;
+    cursor-pointer overflow-hidden;
   }
 
+  .section-heading {
+    @apply text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3
+    bg-indigo-600 hover:bg-indigo-700
+    text-white font-semibold rounded-lg
+    transition-all duration-200 ease-in-out
+    shadow-md hover:shadow-lg;
+  }
+
+  .contact-input {
+    @apply w-full px-4 py-3 rounded-lg
+    bg-gray-100 dark:bg-gray-700
+    border border-gray-300 dark:border-gray-600
+    text-gray-900 dark:text-gray-100
+    placeholder-gray-400 dark:placeholder-gray-500
+    focus:outline-none focus:ring-2 focus:ring-indigo-500
+    transition-all duration-200;
+  }
+
+  .social-link-card {
+    @apply flex flex-col items-center gap-3 p-6
+    bg-white dark:bg-gray-800
+    border border-gray-200 dark:border-gray-700
+    rounded-xl shadow-sm
+    hover:scale-105 hover:shadow-md
+    transition-all duration-200 ease-in-out
+    cursor-pointer no-underline;
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 1.5s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
 }

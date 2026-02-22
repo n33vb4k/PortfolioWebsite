@@ -5,72 +5,70 @@ const projectData = [
     imageSrc: "/images/teletradingcopier.png",
     title: "Telegram to MT5 Trading Signals Copier",
     description:
-      "This project used the MetaTrader 5 API, and Telethon API to read messages from selected channels, and after user configuration of keywords, copy and exectute these trades on the MT5 platform, while notifying the user through a telegram message",
+      "Reads trading signals from Telegram channels via the Telethon API and automatically executes them on MetaTrader 5, with configurable keywords and user notifications.",
+    tags: ["Python", "MetaTrader 5", "Telethon", "APIs"],
+    link: "https://github.com/n33vb4k/TelegramSignalsBot",
   },
   {
     imageSrc: "",
-    title: "Project 2",
-    description: "Description for project 2",
+    title: "Portfolio Website",
+    description:
+      "This site — a single-page portfolio built with React, TypeScript, and Tailwind CSS, featuring smooth-scroll navigation and a dark mode toggle.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    link: "https://github.com/n33vb4k/PortfolioWebsite",
   },
   {
     imageSrc: "",
-    title: "Project 3",
-    description: "Description for project 3",
+    title: "Algorithmic Strategy Backtester",
+    description:
+      "A Python framework for backtesting custom trading strategies on historical OHLCV data, with performance metrics and matplotlib equity-curve charts.",
+    tags: ["Python", "pandas", "matplotlib", "Finance"],
+    link: "https://github.com/n33vb4k/AlgorithmicStrategyBacktester",
   },
   {
     imageSrc: "",
-    title: "Project 4",
-    description: "Description for project 4",
+    title: "Market Sentiment Analyser",
+    description:
+      "Aggregates tweets and Reddit posts about a given ticker, runs NLP sentiment scoring, and produces a daily bull/bear sentiment dashboard.",
+    tags: ["Python", "NLP", "Twitter API", "VADER"],
+    link: "https://github.com/n33vb4k/MarketSentimentAnalyser",
   },
   {
     imageSrc: "",
-    title: "Project 5",
-    description: "Description for project 5",
+    title: "Expense Tracker",
+    description:
+      "A React web app for tracking personal expenses by category, with Chart.js visualisations and LocalStorage persistence — no backend required.",
+    tags: ["React", "Chart.js", "LocalStorage", "CSS"],
+    link: "https://github.com/n33vb4k/ExpenseTracker",
   },
   {
     imageSrc: "",
-    title: "Project 6",
-    description: "Description for project 6",
+    title: "Weather CLI",
+    description:
+      "A command-line weather tool powered by the OpenWeatherMap API, with rich terminal output including forecasts, wind, and humidity data.",
+    tags: ["Python", "OpenWeatherMap", "Rich", "CLI"],
+    link: "https://github.com/n33vb4k/WeatherCLI",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-200 pt-4">
-      <div className="grid grid-cols-3 gap-5">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-200 dark:bg-gray-900 py-16 px-8 font-sans">
+      <h2 className="section-heading">My Projects</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projectData.map((project, index) => (
           <ProjectCard
             key={index}
             imageSrc={project.imageSrc}
             title={project.title}
             description={project.description}
+            tags={project.tags}
+            link={project.link}
           />
         ))}
       </div>
     </div>
   );
 };
-
-// const Projects = () => {
-//   return (
-//     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-200 pt-4">
-//       <div className="grid grid-cols-3 gap-5">
-//         <div className="project_card group">
-//           <img className="h-1/3 rounded-2xl p-2" src={'/images/teletradingcopier.png'} alt={'Telegram Trading Signals Copier'} />
-//           <h2 className="text-center text-lg text-indigo-500 font-bold group-hover:text-white transition-all duration-300 ease-linear bg-transparent p-2">
-//             {'Telegram to MT5 Trading Signals Copier'}</h2>
-//           <p className="text-center text-sm text-black dark:text-white group-hover:bg-gray-800 group-hover:text-white rounded-lg p-2 transition-all duration-300 ease-linear">{
-//           'This project used the MetaTrader 5 API, and Telethon API to read messages from selected channels, and after user configuration of keywords, copy and exectute these trades on the MT5 platform, while notifying the user through a telegram message'}
-//           </p>
-//         </div>
-//         <div className="project_card">2</div>
-//         <div className="project_card">3</div>
-//         <div className="project_card">4</div>
-//         <div className="project_card">5</div>
-//         <div className="project_card">6</div>
-//       </div>
-//     </div>
-//   );
-// };
 
 export default Projects;
