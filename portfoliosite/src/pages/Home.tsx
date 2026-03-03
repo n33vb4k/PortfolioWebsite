@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react';
 import { FiArrowDown } from 'react-icons/fi';
+import Aurora from '../components/ui/Aurora';
+import BlurText from '../components/ui/BlurText';
+import ShinyText from '../components/ui/ShinyText';
+import Magnet from '../components/ui/Magnet';
 
 const skills = ['Python', 'TypeScript', 'React', 'MetaTrader 5', 'REST APIs', 'Tailwind CSS', 'Git', 'pandas'];
 
@@ -8,38 +11,40 @@ type HomeProps = {
 };
 
 const Home = ({ onViewProjects }: HomeProps) => {
-  const fullText = "Hi, I'm Neev Bakshi";
-  const [displayedText, setDisplayedText] = useState('');
-  const [done, setDone] = useState(false);
-
-  useEffect(() => {
-    let index = 0;
-    setDisplayedText('');
-    setDone(false);
-    const interval = setInterval(() => {
-      setDisplayedText(fullText.slice(0, index + 1));
-      index++;
-      if (index === fullText.length) {
-        clearInterval(interval);
-        setDone(true);
-      }
-    }, 60);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 px-8 font-sans">
-      <div className="max-w-2xl w-full flex flex-col items-center text-center gap-6">
-        {/* Typewriter heading */}
-        <h1 className="text-5xl font-bold text-indigo-500 min-h-[3.5rem]">
-          {displayedText}
-          <span className={`inline-block w-0.5 h-10 bg-indigo-500 ml-1 align-middle ${done ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`} />
-        </h1>
+    <div className="min-h-screen relative flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 px-8 font-sans overflow-hidden">
 
-        {/* Subtitle */}
-        <p className="text-xl font-semibold text-gray-700 dark:text-gray-300 animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
-          Software Developer &amp; Automation Engineer
-        </p>
+      {/* Aurora background */}
+      <div className="absolute inset-0 opacity-30 dark:opacity-60 pointer-events-none">
+        <Aurora
+          colorStops={['#4f46e5', '#7c3aed', '#312e81']}
+          amplitude={1.2}
+          blend={0.6}
+          speed={0.5}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-2xl w-full flex flex-col items-center text-center gap-6">
+
+        {/* Heading with BlurText */}
+        <BlurText
+          text="Hi, I'm Neev Bakshi"
+          className="text-5xl font-bold text-indigo-500 justify-center"
+          animateBy="words"
+          direction="top"
+          delay={120}
+          stepDuration={0.4}
+        />
+
+        {/* Subtitle with ShinyText */}
+        <ShinyText
+          text="Software Developer & Automation Engineer"
+          className="text-xl font-semibold"
+          color="#818cf8"
+          shineColor="#e0e7ff"
+          speed={3}
+          delay={0.5}
+        />
 
         {/* Bio */}
         <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed animate-fade-in-up" style={{ animationDelay: '1.5s' }}>
@@ -59,11 +64,13 @@ const Home = ({ onViewProjects }: HomeProps) => {
           ))}
         </div>
 
-        {/* CTA button */}
+        {/* CTA button with Magnet */}
         <div className="animate-fade-in-up" style={{ animationDelay: '2.4s' }}>
-          <button onClick={onViewProjects} className="btn-primary">
-            View Projects <FiArrowDown />
-          </button>
+          <Magnet padding={60} magnetStrength={3}>
+            <button onClick={onViewProjects} className="btn-primary">
+              View Projects <FiArrowDown />
+            </button>
+          </Magnet>
         </div>
       </div>
 

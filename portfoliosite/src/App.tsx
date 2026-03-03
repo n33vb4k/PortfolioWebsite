@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="flex">
       <SideBar onSideBarClick={scrollToPage} />
-      <div className='ml-16 w-full'>
+      <div className='sm:ml-16 w-full'>
         <section ref={homeRef}>
           <Home onViewProjects={() => scrollToPage("projects")} />
         </section>
