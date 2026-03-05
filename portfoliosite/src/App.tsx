@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className="flex">
+    <div className="flex bg-gray-100 dark:bg-gray-900">
       <SideBar onSideBarClick={scrollToPage} />
       <div className='sm:ml-16 w-full'>
         <section ref={homeRef}>
