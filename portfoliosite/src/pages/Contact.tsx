@@ -54,7 +54,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300 dark:bg-gray-900 py-16 px-8 font-sans">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 py-16 px-8 font-sans">
       <div className="max-w-2xl w-full flex flex-col gap-10">
 
         {/* Heading */}
