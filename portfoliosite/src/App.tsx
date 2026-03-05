@@ -3,6 +3,7 @@ import SideBar from "./components/SideBar"
 import Home from "./pages/Home"
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const homeRef = useRef<HTMLDivElement>(null)
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="flex bg-gray-100 dark:bg-gray-900">
+      <Analytics />
       <SideBar onSideBarClick={scrollToPage} />
       <div className='sm:ml-16 w-full'>
         <section ref={homeRef}>
