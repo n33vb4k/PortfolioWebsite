@@ -27,7 +27,7 @@ const SideBar = ({ onSideBarClick }: SideBarProps) => {
   return (
     <div className="hidden sm:flex fixed top-0 left-0 h-screen w-16 flex-col
               bg-white dark:bg-gray-900 shadow-lg justify-between
-              transition-all duration-300 ease-linear">
+              transition-all duration-300 ease-linear z-50">
       <div className="flex-grow-[0.1]"></div>
       <Divider />
 
