@@ -31,28 +31,28 @@ const SideBar = ({ onSideBarClick }: SideBarProps) => {
       <div className="flex-grow-[0.1]"></div>
       <Divider />
 
-      <div className="cursor-pointer" onClick={() => onSideBarClick("home")}>
+      <div className="cursor-pointer group" onClick={() => onSideBarClick("home")}>
         <Magnet padding={30} magnetStrength={4} wrapperClassName="w-full">
           <SideBarIcon icon={<AiFillHome size="26" />} text="Home" />
         </Magnet>
       </div>
       <Divider />
 
-      <div className="cursor-pointer" onClick={() => onSideBarClick("projects")}>
+      <div className="cursor-pointer group" onClick={() => onSideBarClick("projects")}>
         <Magnet padding={30} magnetStrength={4} wrapperClassName="w-full">
           <SideBarIcon icon={<BsFillGrid3X2GapFill size="32" />} text="Projects" />
         </Magnet>
       </div>
       <Divider />
 
-      <div className="cursor-pointer" onClick={() => onSideBarClick("contact")}>
+      <div className="cursor-pointer group" onClick={() => onSideBarClick("contact")}>
         <Magnet padding={30} magnetStrength={4} wrapperClassName="w-full">
           <SideBarIcon icon={<RiContactsBook3Fill size="28" />} text="Contact" />
         </Magnet>
       </div>
       <Divider />
 
-      <div className="cursor-pointer" onClick={toggleTheme}>
+      <div className="cursor-pointer group" onClick={toggleTheme}>
         <Magnet padding={30} magnetStrength={4} wrapperClassName="w-full">
           <SideBarIcon
             icon={
@@ -77,7 +77,7 @@ type SideBarIconProps = {
 };
 
 const SideBarIcon = ({ icon, text = "label" }: SideBarIconProps) => (
-  <div className="sidebar-icon group">
+  <div className="sidebar-icon">
     {icon}
     <span className="sidebar-text group-hover:scale-100">
       {text}

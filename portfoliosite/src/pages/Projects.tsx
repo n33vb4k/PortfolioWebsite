@@ -1,4 +1,6 @@
 import ProjectCard from "../components/ProjectCard";
+import AnimatedContent from "../components/ui/AnimatedContent";
+import FadeContent from "../components/ui/FadeContent";
 
 const featuredProject = {
   title: "LazyTrader",
@@ -56,10 +58,12 @@ const projectData = [
 const Projects = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 py-16 px-8 font-sans">
-      <h2 className="section-heading">My Projects</h2>
+      <FadeContent blur duration={0.8} threshold={0.2}>
+        <h2 className="section-heading">My Projects</h2>
+      </FadeContent>
 
       {/* Featured project — full-width card */}
-      <div className="w-full max-w-5xl mb-6">
+      <AnimatedContent distance={60} duration={0.7} delay={0.1} className="w-full max-w-5xl mb-6">
         <ProjectCard
           title={featuredProject.title}
           description={featuredProject.description}
@@ -67,18 +71,26 @@ const Projects = () => {
           link={featuredProject.link}
           featured
         />
-      </div>
+      </AnimatedContent>
 
       {/* Remaining projects grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
         {projectData.map((project, index) => (
-          <ProjectCard
+          <AnimatedContent
             key={index}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            link={project.link}
-          />
+            distance={50}
+            duration={0.6}
+            delay={0.1 + index * 0.1}
+            threshold={0.05}
+            className="h-full"
+          >
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              link={project.link}
+            />
+          </AnimatedContent>
         ))}
       </div>
     </div>

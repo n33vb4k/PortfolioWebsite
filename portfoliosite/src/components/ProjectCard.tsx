@@ -21,10 +21,10 @@ const ProjectCard = ({ title, description, tags = [], link, featured }: ProjectC
         ★ Featured Project
       </span>
     )}
-    <h3 className={`font-bold leading-snug text-gray-900 dark:text-gray-100 ${featured ? 'text-xl' : 'text-lg'}`}>
+    <h3 className="text-lg font-bold leading-snug text-gray-900 dark:text-gray-100">
       {title}
     </h3>
-    <p className={`leading-relaxed text-gray-600 dark:text-neutral-400 flex-1 ${featured ? 'text-base' : 'text-sm'}`}>
+    <p className="text-sm leading-relaxed text-gray-600 dark:text-neutral-400 flex-1">
       {description}
     </p>
     <div className="flex flex-wrap gap-1.5">
