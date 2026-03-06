@@ -4,7 +4,11 @@ import BlurText from '../components/ui/BlurText';
 import ShinyText from '../components/ui/ShinyText';
 import Magnet from '../components/ui/Magnet';
 
-const skills = ['Python', 'TypeScript', 'React', 'MetaTrader 5', 'REST APIs', 'Tailwind CSS', 'Git', 'pandas'];
+const skills = [
+  'Python', 'TypeScript', 'React', 'C#', 'Java',
+  'PostgreSQL', 'Redis','n8n', 'Docker', 'Tailwind CSS', 
+  'Git', 'REST APIs', 'k8s', 'LangChain'
+];
 
 type HomeProps = {
   onViewProjects: () => void;
@@ -66,7 +70,7 @@ const Home = ({ onViewProjects }: HomeProps) => {
 
         {/* CTA button with Magnet */}
         <div className="animate-fade-in-up" style={{ animationDelay: '2.4s' }}>
-          <Magnet padding={60} magnetStrength={3}>
+          <Magnet padding={10} magnetStrength={5}>
             <button onClick={onViewProjects} className="btn-primary">
               View Projects <FiArrowDown />
             </button>
