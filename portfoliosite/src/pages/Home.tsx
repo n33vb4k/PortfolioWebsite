@@ -4,7 +4,12 @@ import BlurText from '../components/ui/BlurText';
 import ShinyText from '../components/ui/ShinyText';
 import Magnet from '../components/ui/Magnet';
 
-const skills = ['Python', 'TypeScript', 'React', 'MetaTrader 5', 'REST APIs', 'Tailwind CSS', 'Git', 'pandas'];
+const skills = [
+  'Python', 'TypeScript', 'React', 'C#', 'Docker',
+  'Supabase', 'PostgreSQL', 'Redis', 'Celery',
+  'n8n', 'Java', 'MetaTrader 5', 'Tailwind CSS', 
+  'Git', 'REST APIs', 'k8s', 'LangChain', 'Gitlab CI/CD'
+];
 
 type HomeProps = {
   onViewProjects: () => void;
