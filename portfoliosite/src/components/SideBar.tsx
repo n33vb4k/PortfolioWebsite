@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillHome } from "react-icons/ai";
 import { BsFillGrid3X2GapFill } from "react-icons/bs";
-import { RiContactsBook3Fill } from "react-icons/ri";
+import { RiContactsBook3Fill, RiMedalFill } from "react-icons/ri";
 import { FiMoon, FiSun } from "react-icons/fi";
 import Magnet from './ui/Magnet';
 
 type SideBarProps = {
-  onSideBarClick: (section: "home" | "projects" | "contact") => void;
+  onSideBarClick: (section: "home" | "projects" | "certifications" | "contact") => void;
 };
 
 const SideBar = ({ onSideBarClick }: SideBarProps) => {
@@ -41,6 +41,13 @@ const SideBar = ({ onSideBarClick }: SideBarProps) => {
       <div className="cursor-pointer group" onClick={() => onSideBarClick("projects")}>
         <Magnet padding={30} magnetStrength={4} wrapperClassName="w-full">
           <SideBarIcon icon={<BsFillGrid3X2GapFill size="32" />} text="Projects" />
+        </Magnet>
+      </div>
+      <Divider />
+
+      <div className="cursor-pointer group" onClick={() => onSideBarClick("certifications")}>
+        <Magnet padding={30} magnetStrength={4} wrapperClassName="w-full">
+          <SideBarIcon icon={<RiMedalFill size="28" />} text="Certs" />
         </Magnet>
       </div>
       <Divider />

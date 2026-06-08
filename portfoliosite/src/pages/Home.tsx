@@ -1,13 +1,12 @@
 import { FiArrowDown } from 'react-icons/fi';
-import Aurora from '../components/ui/Aurora';
 import BlurText from '../components/ui/BlurText';
 import ShinyText from '../components/ui/ShinyText';
 import Magnet from '../components/ui/Magnet';
 
 const skills = [
   'Python', 'TypeScript', 'React', 'C#', 'Java',
-  'PostgreSQL', 'Redis','n8n', 'Docker', 'Tailwind CSS', 
-  'Git', 'REST APIs', 'k8s', 'LangChain'
+  'PostgreSQL', 'Redis', 'n8n', 'Docker', 'Azure',
+  'Git', 'REST APIs', 'LangChain', 'Tailwind CSS'
 ];
 
 type HomeProps = {
@@ -16,19 +15,9 @@ type HomeProps = {
 
 const Home = ({ onViewProjects }: HomeProps) => {
   return (
-    <div className="min-h-screen relative flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 px-8 font-sans overflow-hidden">
+    <div className="min-h-screen relative flex flex-col items-center justify-center px-8 font-sans">
 
-      {/* Aurora background */}
-      <div className="absolute inset-0 opacity-30 dark:opacity-60 pointer-events-none">
-        <Aurora
-          colorStops={['#4f46e5', '#7c3aed', '#312e81']}
-          amplitude={1.2}
-          blend={0.6}
-          speed={0.5}
-        />
-      </div>
-
-      <div className="relative z-10 max-w-2xl w-full flex flex-col items-center text-center gap-6">
+      <div className="max-w-2xl w-full flex flex-col items-center text-center gap-6">
 
         {/* Heading with BlurText */}
         <BlurText

@@ -54,7 +54,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 py-16 px-8 font-sans">
+    <div className="min-h-screen flex flex-col items-center justify-center py-16 px-8 font-sans">
       <div className="max-w-2xl w-full flex flex-col gap-10">
 
         {/* Heading */}
@@ -100,7 +100,7 @@ const Contact = () => {
                 <p className="text-sm text-green-600 dark:text-green-400">Message sent! I'll be in touch soon.</p>
               )}
               {status === 'error' && (
-                <p className="text-sm text-red-500">Something went wrong — try again.</p>
+                <p className="text-sm text-red-500">Something went wrong. Try again.</p>
               )}
               {status !== 'success' && status !== 'error' && <span />}
               <button type="submit" disabled={status === 'sending'} className="btn-primary disabled:opacity-60 disabled:cursor-not-allowed">

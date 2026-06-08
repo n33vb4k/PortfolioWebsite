@@ -1,0 +1,263 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - separator [ref=e6]
+    - generic [ref=e10] [cursor=pointer]:
+      - img [ref=e11]
+      - generic: Home
+    - separator [ref=e13]
+    - generic [ref=e17] [cursor=pointer]:
+      - img [ref=e18]
+      - generic: Projects
+    - separator [ref=e20]
+    - generic [ref=e24] [cursor=pointer]:
+      - img [ref=e25]
+      - generic: Certs
+    - separator [ref=e27]
+    - generic [ref=e31] [cursor=pointer]:
+      - img [ref=e32]
+      - generic: Contact
+    - separator [ref=e34]
+    - generic [ref=e38] [cursor=pointer]:
+      - img [ref=e40]
+      - generic: Toggle Theme
+    - separator [ref=e46]
+  - generic [ref=e48]:
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - paragraph [ref=e52]:
+          - generic [ref=e53]: Hi,
+          - generic [ref=e54]: I'm
+          - generic [ref=e55]: Neev
+          - generic [ref=e56]: Bakshi
+        - generic [ref=e57]: Software Developer & Automation Engineer
+        - paragraph [ref=e58]:
+          - text: SWE intern at UBS & CS + AI student at the University of Bath. I build automated trading systems, AI-powered tools, and developer infrastructure — and founder of
+          - link "Navaic" [ref=e59] [cursor=pointer]:
+            - /url: https://navaic.com
+          - text: ", an AI marketing & automation studio."
+        - generic [ref=e60]:
+          - generic [ref=e61]: Python
+          - generic [ref=e62]: TypeScript
+          - generic [ref=e63]: React
+          - generic [ref=e64]: C#
+          - generic [ref=e65]: Java
+          - generic [ref=e66]: PostgreSQL
+          - generic [ref=e67]: Redis
+          - generic [ref=e68]: n8n
+          - generic [ref=e69]: Docker
+          - generic [ref=e70]: Azure
+          - generic [ref=e71]: Git
+          - generic [ref=e72]: REST APIs
+          - generic [ref=e73]: LangChain
+          - generic [ref=e74]: Tailwind CSS
+        - button "View Projects" [ref=e78] [cursor=pointer]:
+          - text: View Projects
+          - img [ref=e79]
+      - generic [ref=e81]:
+        - img [ref=e82]
+        - generic [ref=e84]: scroll
+    - generic [ref=e86]:
+      - generic [ref=e88]:
+        - generic [ref=e89]: ★ Featured Project
+        - heading "LazyTrader" [level=3] [ref=e90]
+        - paragraph [ref=e91]: End-to-end trading platform that copies live signals from Telegram channels across forex, crypto, and Polymarket, then layers on NLP-powered sentiment analysis, strategy back-testing & optimisation, real-time risk management, and ML scoring — all wired together with a React + TypeScript dashboard, Supabase auth & storage, a Python/Celery worker pipeline, Redis pub-sub, and MetaAPI execution. Currently a personal build with plans to expand into a SaaS product.
+        - generic [ref=e92]:
+          - generic [ref=e93]: React
+          - generic [ref=e94]: TypeScript
+          - generic [ref=e95]: Python
+          - generic [ref=e96]: Supabase
+          - generic [ref=e97]: PostgreSQL
+          - generic [ref=e98]: Redis
+          - generic [ref=e99]: Celery
+          - generic [ref=e100]: Telethon
+          - generic [ref=e101]: MetaAPI
+          - generic [ref=e102]: NLP
+        - generic [ref=e103]:
+          - img [ref=e104]
+          - text: Private repo
+      - generic [ref=e107]:
+        - generic [ref=e109]:
+          - heading "Navaic" [level=3] [ref=e110]
+          - paragraph [ref=e111]: AI-powered automation platform built for small businesses — connects CRMs, email, and third-party tools into intelligent n8n workflows with a custom Notion backend. Handles lead capture, nurturing sequences, and client onboarding, eliminating manual ops work for non-technical founders.
+          - generic [ref=e112]:
+            - generic [ref=e113]: n8n
+            - generic [ref=e114]: Notion
+            - generic [ref=e115]: Supabase
+            - generic [ref=e116]: AI Agents
+            - generic [ref=e117]: TypeScript
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - text: Private repo
+        - generic [ref=e123]:
+          - heading "Jarvis" [level=3] [ref=e124]
+          - paragraph [ref=e125]: Self-hosted AI automation hub running as a Docker Compose stack. Orchestrates local LLMs via Ollama, n8n workflow pipelines, and PowerShell system scripts — a personal productivity layer with a ClawdBot agent integration and more on the roadmap.
+          - generic [ref=e126]:
+            - generic [ref=e127]: n8n
+            - generic [ref=e128]: Ollama
+            - generic [ref=e129]: Docker
+            - generic [ref=e130]: PowerShell
+          - link "View on GitHub" [ref=e131] [cursor=pointer]:
+            - /url: https://github.com/n33vb4k/Jarvis
+            - text: View on GitHub
+            - img [ref=e132]
+        - generic [ref=e137]:
+          - heading "Telegram → MT5 Signals Copier" [level=3] [ref=e138]
+          - paragraph [ref=e139]: "Real-time trade signal copier: monitors Telegram channels via the Telethon MTProto API, parses signals with configurable keyword filters, and fires matching long/short positions on MetaTrader 5 with automatic lot-size calculation and push notifications."
+          - generic [ref=e140]:
+            - generic [ref=e141]: Python
+            - generic [ref=e142]: MetaTrader 5
+            - generic [ref=e143]: Telethon
+            - generic [ref=e144]: APIs
+          - link "View on GitHub" [ref=e145] [cursor=pointer]:
+            - /url: https://github.com/n33vb4k/TelegramSignalsBot
+            - text: View on GitHub
+            - img [ref=e146]
+        - generic [ref=e151]:
+          - heading "MCP Chat" [level=3] [ref=e152]
+          - paragraph [ref=e153]: Terminal chat client for the Anthropic API with @ mention document retrieval, tab-completable slash-command prompts, and plug-in tool support via the Model Context Protocol — essentially a lightweight local Claude interface.
+          - generic [ref=e154]:
+            - generic [ref=e155]: Python
+            - generic [ref=e156]: Anthropic API
+            - generic [ref=e157]: MCP
+            - generic [ref=e158]: CLI
+          - link "View on GitHub" [ref=e159] [cursor=pointer]:
+            - /url: https://github.com/n33vb4k/GitHub-MCP
+            - text: View on GitHub
+            - img [ref=e160]
+        - generic [ref=e165]:
+          - heading "Console Pac-Man" [level=3] [ref=e166]
+          - paragraph [ref=e167]: Fully playable Pac-Man in the Windows console, built from scratch in C#. Uses a multithreaded game loop to decouple rendering from input, and implements A* pathfinding for ghost AI — runs at a stable 30 fps in a terminal window.
+          - generic [ref=e168]:
+            - generic [ref=e169]: C#
+            - generic [ref=e170]: Multithreading
+            - generic [ref=e171]: A* Pathfinding
+            - generic [ref=e172]: .NET
+          - link "View on GitHub" [ref=e173] [cursor=pointer]:
+            - /url: https://github.com/n33vb4k/ConsolePacManGame
+            - text: View on GitHub
+            - img [ref=e174]
+        - generic [ref=e179]:
+          - heading "Email Spam Classifier" [level=3] [ref=e180]
+          - paragraph [ref=e181]: Two-layer neural network implemented from scratch with NumPy — no ML frameworks. Classifies emails as spam or ham using 54-dimensional bag-of-words feature vectors, trained on 1,000 labelled samples with hand-rolled back-propagation and gradient descent.
+          - generic [ref=e182]:
+            - generic [ref=e183]: Python
+            - generic [ref=e184]: Neural Networks
+            - generic [ref=e185]: NLP
+            - generic [ref=e186]: NumPy
+          - link "View on GitHub" [ref=e187] [cursor=pointer]:
+            - /url: https://github.com/n33vb4k/NN-EmailSpamClassification
+            - text: View on GitHub
+            - img [ref=e188]
+        - generic [ref=e193]:
+          - heading "Portfolio Website" [level=3] [ref=e194]
+          - paragraph [ref=e195]: "This site — a single-page React + TypeScript app with Tailwind CSS, ref-based smooth-scroll nav, dark/light theme, and animated UI components: WebGL aurora background, spotlight cards, per-word blur-in text, and magnetic hover effects."
+          - generic [ref=e196]:
+            - generic [ref=e197]: React
+            - generic [ref=e198]: TypeScript
+            - generic [ref=e199]: Tailwind CSS
+            - generic [ref=e200]: Vite
+          - link "View on GitHub" [ref=e201] [cursor=pointer]:
+            - /url: https://github.com/n33vb4k/PortfolioWebsite
+            - text: View on GitHub
+            - img [ref=e202]
+    - generic [ref=e207]:
+      - generic [ref=e208]:
+        - heading "Microsoft Azure" [level=3] [ref=e210]: Microsoft Azure
+        - generic [ref=e212]:
+          - generic [ref=e215]:
+            - generic [ref=e216]: AI-900
+            - generic [ref=e217]:
+              - 'heading "Microsoft Certified: Azure AI Fundamentals" [level=3] [ref=e218]'
+              - paragraph [ref=e219]: Microsoft
+              - paragraph [ref=e220]: June 2025
+              - link "View credential" [ref=e221] [cursor=pointer]:
+                - /url: https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/
+                - text: View credential
+                - img [ref=e222]
+          - generic [ref=e228]:
+            - generic [ref=e229]: AZ-900
+            - generic [ref=e230]:
+              - 'heading "Microsoft Certified: Azure Fundamentals" [level=3] [ref=e231]'
+              - paragraph [ref=e232]: Microsoft
+              - paragraph [ref=e233]: June 2025
+              - link "View credential" [ref=e234] [cursor=pointer]:
+                - /url: https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/
+                - text: View credential
+                - img [ref=e235]
+      - generic [ref=e239]:
+        - heading "Other" [level=3] [ref=e241]: Other
+        - generic [ref=e243]:
+          - generic [ref=e246]:
+            - generic [ref=e247]: MCP
+            - generic [ref=e248]:
+              - heading "Introduction to Model Context Protocol" [level=3] [ref=e249]
+              - paragraph [ref=e250]: Anthropic
+              - paragraph [ref=e251]: Nov 2024
+              - link "View credential" [ref=e252] [cursor=pointer]:
+                - /url: https://lnkd.in/ejsCeJuS
+                - text: View credential
+                - img [ref=e253]
+          - generic [ref=e259]:
+            - generic [ref=e260]: Java
+            - generic [ref=e261]:
+              - heading "Spring Framework for Java Development" [level=3] [ref=e262]
+              - paragraph [ref=e263]: SkillUp EdTech
+              - paragraph [ref=e264]: Aug 2024
+          - generic [ref=e267]:
+            - generic [ref=e268]: JPM
+            - generic [ref=e269]:
+              - heading "Software Engineering Virtual Experience" [level=3] [ref=e270]
+              - paragraph [ref=e271]: JPMorgan Chase (Forage)
+              - paragraph [ref=e272]: "2023"
+      - generic [ref=e273]:
+        - heading "HackerRank" [level=3] [ref=e275]: HackerRank
+        - generic [ref=e277]:
+          - generic [ref=e280]:
+            - generic [ref=e281]: HR
+            - generic [ref=e282]:
+              - heading "Python (Basic)" [level=3] [ref=e283]
+              - paragraph [ref=e284]: HackerRank
+              - paragraph [ref=e285]: "2024"
+          - generic [ref=e288]:
+            - generic [ref=e289]: HR
+            - generic [ref=e290]:
+              - heading "Problem Solving (Basic)" [level=3] [ref=e291]
+              - paragraph [ref=e292]: HackerRank
+              - paragraph [ref=e293]: "2024"
+    - generic [ref=e296]:
+      - generic [ref=e297]:
+        - heading "Get In Touch" [level=2] [ref=e298]
+        - paragraph [ref=e299]: Have a project in mind or just want to say hello? Fill out the form below or reach me on any of the platforms.
+      - generic [ref=e301]:
+        - textbox "Your Name" [ref=e302]
+        - textbox "Your Email" [ref=e303]
+        - textbox "Your Message" [ref=e304]
+        - button "Send Message" [ref=e306] [cursor=pointer]:
+          - text: Send Message
+          - img [ref=e307]
+      - generic [ref=e310]:
+        - separator [ref=e311]
+        - generic [ref=e312]: or find me on
+        - separator [ref=e313]
+      - generic [ref=e314]:
+        - link "GitHub @n33vb4k" [ref=e315] [cursor=pointer]:
+          - /url: https://github.com/n33vb4k
+          - generic [ref=e316]:
+            - img [ref=e318]
+            - generic [ref=e320]:
+              - paragraph [ref=e321]: GitHub
+              - paragraph [ref=e322]: "@n33vb4k"
+        - link "LinkedIn Neev Bakshi" [ref=e323] [cursor=pointer]:
+          - /url: https://linkedin.com/in/neev-bakshi
+          - generic [ref=e324]:
+            - img [ref=e326]
+            - generic [ref=e330]:
+              - paragraph [ref=e331]: LinkedIn
+              - paragraph [ref=e332]: Neev Bakshi
+        - link "Email neev.bakshi@gmail.com" [ref=e333] [cursor=pointer]:
+          - /url: mailto:neev.bakshi@gmail.com
+          - generic [ref=e334]:
+            - img [ref=e336]
+            - generic [ref=e339]:
+              - paragraph [ref=e340]: Email
+              - paragraph [ref=e341]: neev.bakshi@gmail.com
