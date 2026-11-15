@@ -1,28 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [ 
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",],
-  darkMode: 'class',
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Archivo', 'system-ui', 'sans-serif'],
       },
       colors: {
-        gray: {
-          900: '#202225',
-          800: '#2f3136',
-          700: '#36393f',
-          600: '#4f545c',
-          400: '#d4d7dc',
-          300: '#e3e5e8',
-          200: '#ebedef',
-          100: '#f2f3f5',
-        },
-      }
+        paper: '#ECEFF1',
+        rule: '#C9CFD6',
+        slate: '#5B6675',
+        ink: '#0F1B2D',
+        cobalt: '#2442E0',
+        long: '#1F9D6B',
+        short: '#E0574A',
+      },
+      transitionTimingFunction: {
+        expo: 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'expo-in-out': 'cubic-bezier(0.87, 0, 0.13, 1)',
+      },
     },
   },
   plugins: [],
 }
-
