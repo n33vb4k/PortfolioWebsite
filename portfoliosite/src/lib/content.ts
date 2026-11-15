@@ -8,9 +8,22 @@ export type Project = {
   stack: string[]
   source?: string
   sourceLabel?: string
+  live?: string
+  credit?: string
 }
 
 export const projects: Project[] = [
+  {
+    title: 'Spotify sorter',
+    preview: 'speakers',
+    what: 'Sorts a music library by listening to it',
+    description:
+      'Spotify no longer tells developers what genre a song is, so this listens instead. An audio-tagging model runs in the browser on each song’s 30-second preview, sorts it into one of 400 styles, and creates new private playlists that you review first. I ported Essentia’s C++ audio preprocessing to TypeScript, and it matches the original to within 0.00001. Your library never leaves your device.',
+    stack: ['Next.js', 'TypeScript', 'ONNX Runtime Web', 'Web Workers', 'Web Audio API', 'Essentia'],
+    live: 'https://spotify-sorter-eight.vercel.app',
+    source: 'https://github.com/n33vb4k/spotify-sorter',
+    credit: 'Style models by MTG-UPF (Essentia), CC BY-NC-ND 4.0',
+  },
   {
     title: 'Jarvis',
     preview: 'llm',
