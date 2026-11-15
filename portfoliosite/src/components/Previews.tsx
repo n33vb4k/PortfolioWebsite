@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { reducedMotion } from '../lib/scroll'
 
-export type PreviewKind = 'workflow' | 'llm' | 'trade' | 'terminal' | 'maze' | 'classifier' | 'type'
+export type PreviewKind = 'speakers' | 'workflow' | 'llm' | 'trade' | 'terminal' | 'maze' | 'classifier' | 'type'
 
 const C = {
   raise: '#16243A',
@@ -450,6 +450,51 @@ function Classifier() {
   )
 }
 
+/* Spotify sorter: each playlist is a speaker cabinet, its height is its song count */
+const CABINETS = [
+  { label: 'Chill', songs: 12, color: 'oklch(0.52 0.12 270)' },
+  { label: 'House & Techno', songs: 9, color: 'oklch(0.5 0.12 205)' },
+  { label: 'UK Garage', songs: 6, color: 'oklch(0.47 0.12 150)' },
+  { label: 'Grime & UK Rap', songs: 6, color: 'oklch(0.42 0.12 45)' },
+  { label: 'Drum & Bass', songs: 4, color: 'oklch(0.52 0.12 25)' },
+]
+const TOTAL_SONGS = CABINETS.reduce((n, c) => n + c.songs, 0)
+const GAP = 3
+
+function SpeakerStack() {
+  const still = reducedMotion()
+  const [grown, setGrown] = useState(still)
+  useEffect(() => {
+    if (still) return
+    const raf = requestAnimationFrame(() => requestAnimationFrame(() => setGrown(true)))
+    return () => cancelAnimationFrame(raf)
+  }, [still])
+  return (
+    <div className="absolute inset-x-[14%] inset-y-[9%] flex flex-col-reverse" style={{ gap: GAP }}>
+      {CABINETS.map((c, i) => (
+        <div
+          key={c.label}
+          className="relative flex items-center justify-end overflow-hidden rounded-[4px] pr-3"
+          style={{
+            height: grown ? `calc((100% - ${GAP * (CABINETS.length - 1)}px) * ${c.songs / TOTAL_SONGS})` : 0,
+            transition: still ? 'none' : `height 160ms cubic-bezier(0.16, 1, 0.3, 1) ${i * 160}ms`,
+            backgroundColor: c.color,
+            backgroundImage: 'radial-gradient(rgb(0 0 0 / 0.22) 0.9px, transparent 1.2px)',
+            backgroundSize: '4px 4px',
+          }}
+        >
+          <span
+            className="whitespace-nowrap text-[0.7rem] uppercase leading-none tracking-[0.04em] text-white"
+            style={{ fontVariationSettings: "'wdth' 62, 'wght' 780" }}
+          >
+            {c.label} {c.songs}
+          </span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 /* This website: the width axis the whole page is built on */
 function TypeAxis() {
   return (
@@ -460,6 +505,7 @@ function TypeAxis() {
 }
 
 const PREVIEWS: Record<PreviewKind, { el: () => ReactNode; caption: string }> = {
+  speakers: { el: () => <SpeakerStack />, caption: 'Each playlist is a speaker cabinet, as tall as its song count.' },
   workflow: { el: () => <Workflow />, caption: 'A lead moving through a typical Navaic workflow.' },
   llm: { el: () => <LocalLLM />, caption: 'Asking a local model to plan the morning.' },
   trade: { el: () => <TradeRun />, caption: 'A copied gold trade running to its target or stop.' },

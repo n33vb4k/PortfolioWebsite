@@ -61,15 +61,21 @@ function ProjectRow({ p }: { p: Project }) {
               <p className="max-w-[60ch] md:col-span-6 md:col-start-6">{p.description}</p>
               <div className="t-small text-slate md:col-span-6 md:col-start-6">
                 <p>Built with {p.stack.join(', ')}</p>
-                <p className="mt-3">
+                <p className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+                  {p.live && (
+                    <a href={p.live} target="_blank" rel="noopener noreferrer" className="link-rest font-medium text-cobalt">
+                      Open the live site
+                    </a>
+                  )}
                   {p.source ? (
                     <a href={p.source} target="_blank" rel="noopener noreferrer" className="link-rest font-medium text-cobalt">
                       {p.sourceLabel ?? 'View source on GitHub'}
                     </a>
                   ) : (
-                    'Source is private'
+                    <span>Source is private</span>
                   )}
                 </p>
+                {p.credit && <p className="mt-3">{p.credit}</p>}
               </div>
             </div>
           </motion.div>
